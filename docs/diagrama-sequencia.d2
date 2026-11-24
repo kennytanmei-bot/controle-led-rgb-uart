@@ -1,0 +1,15 @@
+shape: sequence_diagram
+
+PC: Computador (testar_uart.py)
+UART_HW: UART0 (hardware)
+ISR: uart_isr
+Fila: Fila rx_q
+Main: Laco do main
+LED: LED RGB
+
+PC -> UART_HW: "A5 R G B ACAO CHECK (115200 8N1)"
+UART_HW -> ISR: interrupcao RX
+ISR -> Fila: k_msgq_put() por byte
+Main -> Fila: k_msgq_get()
+Main -> Main: "ID == 0xA5? CHECK confere?"
+Main -> LED: "run_command() (PWM ou GPIO)"
