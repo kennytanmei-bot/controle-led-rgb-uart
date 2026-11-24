@@ -157,8 +157,3 @@ O ciclo do TDD adotado é: definir o caso de teste, vê-lo falhar, implementar o
 | RX desabilitado | Não se aplica | A recepção é habilitada uma vez em `main()` e permanece ativa |
 
 > **Observação:** as linhas "Entrada vazia" e "Buffer grande" não fazem parte do script atual (que não foi alterado); descrevem o comportamento esperado do firmware e podem ser reproduzidos enviando os dados manualmente por um terminal serial.
-
-### 8.1 Evidências
-
-*Inserir aqui as capturas do terminal do `testar_uart.py` (XOR e CRC-8), com os casos passando e, se houver, o caso que falhou antes da implementação.*
-"
